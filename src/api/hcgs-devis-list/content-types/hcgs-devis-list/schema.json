@@ -1,0 +1,64 @@
+{
+  "kind": "collectionType",
+  "collectionName": "hcgs_devis_lists",
+  "info": {
+    "singularName": "hcgs-devis-list",
+    "pluralName": "hcgs-devis-lists",
+    "displayName": "hcgs-devis-list",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Nom": {
+      "type": "string",
+      "required": true
+    },
+    "Prenom": {
+      "type": "string",
+      "required": true
+    },
+    "Rue": {
+      "type": "string",
+      "required": true
+    },
+    "Numero": {
+      "type": "integer",
+      "required": true
+    },
+    "CodePostal": {
+      "type": "integer",
+      "required": true,
+      "min": 1000,
+      "max": 9999
+    },
+    "Commune": {
+      "type": "string",
+      "required": true
+    },
+    "email": {
+      "type": "email",
+      "required": true
+    },
+    "Telephone": {
+      "type": "string",
+      "required": true
+    },
+    "Services": {
+      "type": "customField",
+      "default": "[]",
+      "options": [
+        "Toiture",
+        "Isolation",
+        "Ventilation",
+        "Photovoltaique",
+        "Chauffe_eau_thermodynamique"
+      ],
+      "required": true,
+      "min": 1,
+      "customField": "plugin::multi-select.multi-select"
+    }
+  }
+}

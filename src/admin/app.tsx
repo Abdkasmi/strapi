@@ -3,8 +3,8 @@ import type { StrapiApp } from '@strapi/strapi/admin';
 export default {
   config: {
     locales: [
+      'fr',
       // 'ar',
-      // 'fr',
       // 'cs',
       // 'de',
       // 'dk',
